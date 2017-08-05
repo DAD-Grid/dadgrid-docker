@@ -1,0 +1,15 @@
+<input_template>
+    <file_info>
+        <number>0</number>
+    </file_info>
+    <workunit>
+        <file_ref>
+            <file_number>0</file_number>
+            <open_name>fruit1.png</open_name>
+            <copy_file/>
+        </file_ref>
+        <rsc_fpops_bound>1e12</rsc_fpops_bound>
+        <rsc_fpops_est>1e14</rsc_fpops_est>
+        <rsc_memory_bound>1e8</rsc_memory_bound>
+    </workunit>
+</input_template>

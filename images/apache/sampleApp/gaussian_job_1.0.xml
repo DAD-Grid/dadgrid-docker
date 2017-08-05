@@ -1,0 +1,6 @@
+<job_desc>
+    <task>
+        <application>gaussian</application>
+        <command_line>fruit1.png</command_line>
+    </task>
+</job_desc>

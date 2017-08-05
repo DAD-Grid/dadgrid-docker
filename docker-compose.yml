@@ -1,0 +1,33 @@
+version: "2"
+
+volumes:
+  mysql:
+  project:
+  boinc:
+  NVPACK:
+  results:
+
+services:
+  mysql:
+    build: images/mysql
+    network_mode: bridge
+    volumes:
+     - "mysql:/var/lib/mysql"
+    environment: 
+     - MYSQL_ROOT_PASSWORD=
+     - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+     - MYSQL_ROOT_HOST=%
+  apache:
+    build: images/apache
+    hostname: boincserver
+    network_mode: bridge
+    links:
+     - mysql
+    volumes: 
+     - "project:/root/project"
+     - "boinc:/root/boinc"
+     - "NVPACK:/root/NVPACK"
+     - "results:/results"
+    ports: 
+     - "80:80"
+    tty: true
